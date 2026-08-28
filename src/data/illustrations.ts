@@ -1,9 +1,7 @@
-import doubleAiryFairImage from '../assets/illustrations/tirazain-double-airy-fair.png'
-import farranehDividerImage from '../assets/illustrations/tirazain-farraneh-divider.png'
-import oliveBranchImage from '../assets/illustrations/tirazain-olive-branch.png'
-import qalbHeartImage from '../assets/illustrations/tirazain-qalb-heart.png'
-import reeshFeathersImage from '../assets/illustrations/tirazain-reesh-feathers.png'
-import treeOfLifeImage from '../assets/illustrations/tirazain-tree-of-life.png'
+import nafnoofBorder14Image from '../assets/illustrations/tirazain-nafnoof-border-14.png'
+import tilesOfBethlehemImage from '../assets/illustrations/tirazain-tiles-bethlehem.png'
+import wallsOfJerusalemImage from '../assets/illustrations/tirazain-walls-jerusalem.png'
+import zigzagImage from '../assets/illustrations/tirazain-zigzag.png'
 
 export type ArchiveIllustration = {
   title: string
@@ -14,46 +12,32 @@ export type ArchiveIllustration = {
 }
 
 export const tirazainIllustrations = {
-  farranehDivider: {
-    title: "Farraneh / Baker's Wife",
-    image: farranehDividerImage,
+  nafnoofBorder14: {
+    title: 'Nafnoof / Border (14)',
+    image: nafnoofBorder14Image,
     width: 1500,
     height: 1500,
-    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-wgzf8',
+    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-d4wtn',
   },
-  qalbHeart: {
-    title: 'Qalb / Heart (3)',
-    image: qalbHeartImage,
-    width: 1500,
-    height: 1500,
-    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-annh6',
+  tilesOfBethlehem: {
+    title: 'Balat Beit Lahem / Tiles of Bethlehem',
+    image: tilesOfBethlehemImage,
+    width: 1920,
+    height: 1920,
+    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-sgfes',
   },
-  doubleAiryFair: {
-    title: 'Irq Al Nafnoof Mkabbas / Double Airy Fair',
-    image: doubleAiryFairImage,
-    width: 1500,
-    height: 1500,
-    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-3t8ga',
+  wallsOfJerusalem: {
+    title: 'Sur Al Quds / Walls of Jerusalem',
+    image: wallsOfJerusalemImage,
+    width: 1920,
+    height: 1920,
+    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-a6nk6',
   },
-  reeshFeathers: {
-    title: 'Reesh / Feathers',
-    image: reeshFeathersImage,
-    width: 1500,
-    height: 1500,
-    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-9jmbe',
-  },
-  oliveBranch: {
-    title: 'Irq Al Zaytoun / Olive Branch (1)',
-    image: oliveBranchImage,
-    width: 750,
-    height: 750,
-    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-66k56',
-  },
-  treeOfLife: {
-    title: 'Shajarat Al Hayat / Tree of Life',
-    image: treeOfLifeImage,
-    width: 750,
-    height: 750,
-    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-sj85k',
+  zigzag: {
+    title: 'Tareeq / Zigzag',
+    image: zigzagImage,
+    width: 1920,
+    height: 1920,
+    sourceUrl: 'https://tirazain.com/archive/p/lily-f5j49-2ydlp-jkdr3-lh9l6',
   },
 } satisfies Record<string, ArchiveIllustration>

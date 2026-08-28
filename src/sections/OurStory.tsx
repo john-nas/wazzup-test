@@ -1,38 +1,16 @@
 import { story } from '../data/story'
 
-const highlightedHeadingWords = new Set(['Ahmad', 'we'])
-
-function renderStoryHeading(heading: string) {
-  return heading.split(/(Ahmad|\bwe\b)/g).map((part, index) =>
-    highlightedHeadingWords.has(part) ? (
-      <mark className="story-heading__connection" key={`${part}-${index}`}>
-        {part}
-      </mark>
-    ) : part,
-  )
-}
-
 function OurStory() {
   return (
     <section className="story-section section" id="about" aria-labelledby="story-heading">
       <div className="container story-grid">
         <div className="story-copy">
-          <p className="eyebrow eyebrow--timber">{story.eyebrow}</p>
-          <h2 id="story-heading">{renderStoryHeading(story.heading)}</h2>
+          <p className="eyebrow">{story.eyebrow}</p>
+          <h1 id="story-heading">{story.heading}</h1>
           {story.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-          <div className="story-sources">
-            <span>Story sources</span>
-            {story.sources.map((source) => (
-              <a href={source.url} key={source.url} target="_blank" rel="noreferrer">
-                {source.publication} <span aria-hidden="true">↗</span>
-              </a>
-            ))}
-          </div>
         </div>
-
-        <div className="story-grid__motif" aria-hidden="true" />
 
         <div className="story-gallery">
           <figure className="story-gallery__interior">
@@ -54,7 +32,7 @@ function OurStory() {
               loading="lazy"
               decoding="async"
             />
-            <figcaption>Ahmad Alalaea, owner</figcaption>
+            <figcaption>Ahmad Alalaea</figcaption>
           </figure>
         </div>
       </div>

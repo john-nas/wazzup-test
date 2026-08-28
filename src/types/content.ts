@@ -24,19 +24,12 @@ export type BusinessDetails = {
   socials: SocialLink[]
 }
 
-export type MediaKind = 'feature' | 'video' | 'review'
-
-export type MediaMention = {
-  outlet: string
-  title: string
-  url: string
-  kind: MediaKind
-}
-
 export type MenuItem = {
   id: string
   name: string
   priceInCents: number
+  description?: string
+  image?: ImageAsset
 }
 
 export type MenuCategory = {
@@ -69,23 +62,4 @@ export type StoryContent = {
   }[]
   portrait: ImageAsset
   interior: ImageAsset
-}
-
-export type Product = {
-  id: string
-  name: string
-  description: string
-  priceInCents: number
-  image: string
-  imageAlt: string
-  imageWidth: number
-  imageHeight: number
-  treatment: 'logo' | 'tree' | 'olive'
-  status: 'prototype'
-}
-
-export type ShopCatalog = {
-  currency: 'AUD'
-  notice: string
-  products: Product[]
 }

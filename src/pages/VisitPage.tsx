@@ -1,6 +1,5 @@
 import storefrontImage from '../assets/images/northcote-storefront.webp'
 import Visit from '../sections/Visit'
-import MotifDivider from '../components/MotifDivider'
 
 function VisitPage() {
   return (
@@ -14,11 +13,10 @@ function VisitPage() {
           fetchPriority="high"
         />
         <div className="visit-masthead__overlay">
-          <p className="eyebrow">Northcote, Melbourne/Naarm</p>
-          <h1 id="visit-page-heading">Meet you on High Street.</h1>
+          <p className="eyebrow eyebrow--light">343 High Street, Northcote</p>
+          <h1 id="visit-page-heading">Come by for a falafel.</h1>
         </div>
       </section>
-      <MotifDivider />
       <Visit />
     </>
   )

@@ -3,13 +3,12 @@ import ownerImage from '../assets/images/owner-ahmad.webp'
 import type { StoryContent } from '../types/content'
 
 export const story: StoryContent = {
-  eyebrow: 'From Palestine to Preston',
-  heading: 'The falafel Ahmad missed became the food we found',
+  eyebrow: "Ahmad's story",
+  heading: 'He just wanted a proper falafel.',
   paragraphs: [
-    'When Ahmad Alalaea arrived in Australia in 2017, food was not the career he had planned. He was a personal trainer with a master’s degree in health and physical education—but he could not find the everyday falafel he remembered from growing up Palestinian in Jordan.',
-    'Rather than settle for something close, Ahmad returned to Jordan in 2019 and spent time learning in falafel restaurants. He came back wanting to introduce people across Melbourne/Naarm to the crisp, deeply spiced Palestinian-Jordanian street-style falafel he knew from home.',
-    'Wazzup began as a food truck in Preston in March 2020. It was difficult timing, but Melbourne/Naarm’s five-kilometre lockdown radius also created a fiercely local following. People came back for the falafel, hummus and dishes that tasted unlike the versions they already knew.',
-    'The permanent Northcote restaurant is the next chapter: more room for the food, the family stories and Ahmad’s generous welcome—without losing the directness of the original truck.',
+    'When Ahmad Alalaea arrived in Australia in 2017, he missed the everyday falafel he grew up eating in Jordan. He could not find one that tasted right, so he went back in 2019 and learned the work in local falafel shops.',
+    'He returned to Melbourne and opened the Wazzup food truck in Preston in 2020. People came back for falafel that was crisp outside, green with herbs inside and made fresh in front of them.',
+    'Now Wazzup is at 343 High Street, Northcote. Everything is made in house. Ahmad is often at the counter introducing himself and handing over a hot falafel to try.',
   ],
   sources: [
     {
@@ -36,7 +35,7 @@ export const story: StoryContent = {
   },
   interior: {
     src: interiorImage,
-    alt: 'Customers dining beneath warm pendant lights inside Wazzup Falafel',
+    alt: 'Customers dining inside Wazzup Falafel in Northcote',
     width: 860,
     height: 573,
   },
