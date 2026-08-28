@@ -1,9 +1,6 @@
 import { Link } from 'react-router-dom'
 import { business } from '../data/business'
-import { tirazainIllustrations } from '../data/illustrations'
-import { mediaMentions } from '../data/media'
 import footerLogo from '../assets/images/wazzup_falafel_logo2.jpg'
-import IllustrationCredit from './IllustrationCredit'
 import TatreezDivider from './TatreezDivider'
 
 function Footer() {
@@ -34,41 +31,10 @@ function Footer() {
           <a href={business.socials[1].url} target="_blank" rel="noreferrer">Instagram</a>
         </nav>
       </div>
-      <section className="footer-press" aria-labelledby="footer-press-heading">
-        <div className="container footer-press__inner">
-          <h2 id="footer-press-heading">As seen on</h2>
-          <ul>
-            {mediaMentions.map((mention) => (
-              <li key={mention.url}>
-                <a
-                  href={mention.url}
-                  aria-label={`${mention.outlet}: ${mention.title}`}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img
-                    className={`footer-press__logo footer-press__logo--${mention.id}`}
-                    src={mention.logo.src}
-                    width={mention.logo.width}
-                    height={mention.logo.height}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
       <div className="container footer-attribution">
-        <IllustrationCredit
-          illustrations={[
-            tirazainIllustrations.tilesOfBethlehem,
-            tirazainIllustrations.wallsOfJerusalem,
-            tirazainIllustrations.zigzag,
-          ]}
-        />
+        <p className="illustration-credit">
+          Tatreez illustrations: <Link to="/credits">Tirazain ↗</Link>
+        </p>
       </div>
       <div className="container footer-bottom">
         <span>Copyright {new Date().getFullYear()} {business.name}</span>

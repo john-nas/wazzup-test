@@ -16,7 +16,7 @@ function HomePage() {
               src={ownerImage}
               width="860"
               height="573"
-              alt="Wazzup Falafel owner Ahmad Alalaea in the Northcote restaurant"
+              alt="Wazzup Falafel chef and co-owner Ahmad Al Alaea in the Northcote restaurant"
               loading="lazy"
               decoding="async"
             />
@@ -26,11 +26,11 @@ function HomePage() {
             <h2 id="home-ahmad-heading">Ahmad will probably say hello.</h2>
             <p>
               There is a good chance the first thing you eat will be a hot falafel
-              Ahmad hands you across the counter. He likes people to taste it fresh.
+              Ahmad hands you across the counter.
             </p>
             <p>
-              Everything is made here, from the falafel and hummus to the salads
-              and sauces. Order at the counter and eat it while it is hot.
+              The falafel mix is blended in house with Wazzup's secret 21-spice blend.
+              Hummus, tahini, condiments and pita are all made fresh every morning.
             </p>
             <Link className="text-link" to="/story">Meet Ahmad</Link>
           </div>

@@ -18,7 +18,6 @@ export type BusinessDetails = {
     region: string
     postcode: string
     mapUrl: string
-    mapEmbedUrl: string
   }
   openingHours: DayHours[]
   socials: SocialLink[]

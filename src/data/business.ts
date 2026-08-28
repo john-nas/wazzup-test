@@ -8,7 +8,6 @@ export const business: BusinessDetails = {
     region: 'VIC',
     postcode: '3070',
     mapUrl: 'https://www.google.com/maps/search/?api=1&query=343+High+St+Northcote+VIC+3070',
-    mapEmbedUrl: 'https://www.google.com/maps?q=343+High+St+Northcote+VIC+3070&output=embed',
   },
   openingHours: [
     { day: 'Monday', hours: 'Closed', isClosed: true },

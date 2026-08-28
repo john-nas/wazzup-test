@@ -3,6 +3,10 @@ import { business } from '../data/business'
 function Visit() {
   const { address } = business
   const instagram = business.socials.find((social) => social.platform === 'Instagram')
+  const today = new Intl.DateTimeFormat('en-AU', {
+    weekday: 'long',
+    timeZone: 'Australia/Melbourne',
+  }).format(new Date())
 
   return (
     <section className="visit-section section" id="location" aria-labelledby="visit-heading">
@@ -11,12 +15,21 @@ function Visit() {
           <p className="eyebrow">Plan your visit</p>
           <h2 id="visit-heading">Opening hours</h2>
           <dl>
-            {business.openingHours.map((entry) => (
-              <div className={entry.isClosed ? 'is-closed' : undefined} key={entry.day}>
-                <dt>{entry.day}</dt>
-                <dd>{entry.hours}</dd>
-              </div>
-            ))}
+            {business.openingHours.map((entry) => {
+              const isToday = entry.day === today
+              const rowClassName = [entry.isClosed && 'is-closed', isToday && 'is-today']
+                .filter(Boolean)
+                .join(' ')
+
+              return (
+                <div className={rowClassName || undefined} key={entry.day}>
+                  <dt aria-current={isToday ? 'date' : undefined}>
+                    {entry.day}{isToday && ' · Today'}
+                  </dt>
+                  <dd>{entry.hours}</dd>
+                </div>
+              )
+            })}
           </dl>
           <p className="data-note">Hours may vary on public holidays.</p>
         </div>
@@ -39,15 +52,6 @@ function Visit() {
           )}
         </div>
 
-        <div className="map-embed">
-          <iframe
-            src={address.mapEmbedUrl}
-            title="Google Map showing Wazzup Falafel on High Street in Northcote"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            allowFullScreen
-          />
-        </div>
       </div>
     </section>
   )

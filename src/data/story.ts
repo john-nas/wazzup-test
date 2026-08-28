@@ -6,9 +6,9 @@ export const story: StoryContent = {
   eyebrow: "Ahmad's story",
   heading: 'He just wanted a proper falafel.',
   paragraphs: [
-    'When Ahmad Alalaea arrived in Australia in 2017, he missed the everyday falafel he grew up eating in Jordan. He could not find one that tasted right, so he went back in 2019 and learned the work in local falafel shops.',
-    'He returned to Melbourne and opened the Wazzup food truck in Preston in 2020. People came back for falafel that was crisp outside, green with herbs inside and made fresh in front of them.',
-    'Now Wazzup is at 343 High Street, Northcote. Everything is made in house. Ahmad is often at the counter introducing himself and handing over a hot falafel to try.',
+    'When chef and co-owner Ahmad Al Alaea arrived in Australia in 2017, he missed the everyday falafel he grew up eating in Jordan. He couldn’t find one that tasted right, so he went back in 2019 and learned the tools of the trade in local falafel shops.',
+    'Back in Melbourne/Naarm, Ahmad put what he had learned into Wazzup’s food truck in 2019. His friend Bara Sifi is his business partner and fellow co-owner.',
+    'Today Wazzup is at 343 High Street, Northcote. The falafel uses a secret 21-spice blend. Pita is made fresh every morning, and the falafel mix, hummus, tahini and condiments are made in-house. Ahmad is often at the counter, handing over a hot falafel to try.',
   ],
   sources: [
     {
@@ -26,10 +26,15 @@ export const story: StoryContent = {
       title: 'Trader Spotlight: Wazzup Falafel',
       url: 'https://northcoterise.com.au/news-stories/trader-spotlight-wazzup-falafel',
     },
+    {
+      publication: 'Broadsheet',
+      title: 'Wazzup Falafel, Northcote',
+      url: 'https://www.broadsheet.com.au/melbourne/northcote/restaurants/wazzup-falafel',
+    },
   ],
   portrait: {
     src: ownerImage,
-    alt: 'Wazzup Falafel owner Ahmad Alalaea inside the restaurant',
+    alt: 'Wazzup Falafel chef and co-owner Ahmad Al Alaea inside the restaurant',
     width: 860,
     height: 573,
   },
