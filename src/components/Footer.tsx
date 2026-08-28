@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { business } from '../data/business'
 import { tirazainIllustrations } from '../data/illustrations'
 import { mediaMentions } from '../data/media'
+import footerLogo from '../assets/images/wazzup_falafel_logo2.jpg'
 import IllustrationCredit from './IllustrationCredit'
 import TatreezDivider from './TatreezDivider'
 
@@ -13,7 +14,15 @@ function Footer() {
       <TatreezDivider pattern="zigzag" dark />
       <div className="container footer-main">
         <div>
-          <strong className="footer-name">Wazzup Falafel</strong>
+          <img
+            className="footer-name"
+            src={footerLogo}
+            width="410"
+            height="92"
+            alt="Wazzup Falafel"
+            loading="lazy"
+            decoding="async"
+          />
           <address>
             {address.street}, {address.suburb} {address.region} {address.postcode}
           </address>
@@ -37,7 +46,15 @@ function Footer() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {mention.outlet}
+                  <img
+                    className={`footer-press__logo footer-press__logo--${mention.id}`}
+                    src={mention.logo.src}
+                    width={mention.logo.width}
+                    height={mention.logo.height}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
                 </a>
               </li>
             ))}

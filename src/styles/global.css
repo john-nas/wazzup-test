@@ -469,6 +469,46 @@ main {
   font-size: 1rem;
 }
 
+.menu-intro__layout {
+  display: grid;
+  gap: 2rem;
+}
+
+.menu-intro__feature {
+  width: min(100%, 14.375rem);
+  margin: 0 auto;
+}
+
+.menu-intro__feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+.menu-intro__feature figcaption {
+  padding-top: 1.15rem;
+}
+
+.menu-intro__feature .eyebrow {
+  margin-bottom: 0.4rem;
+}
+
+.menu-intro__feature h2 {
+  margin: 0 0 0.4rem;
+  font-family: var(--font-display);
+  font-size: 2.15rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.menu-intro__feature figcaption > p:last-child {
+  margin: 0;
+  color: rgba(36, 37, 31, 0.72);
+  font-size: 0.9rem;
+}
+
 .menu-section {
   padding-block: 2.25rem 4.5rem;
   background: var(--color-bone);
@@ -577,6 +617,7 @@ main {
 .menu-item-details p {
   max-width: 27rem;
   margin: 0;
+  padding: 0 0.75rem 0.25rem;
   color: rgba(36, 37, 31, 0.72);
   font-size: 0.875rem;
   line-height: 1.5;
@@ -830,11 +871,9 @@ main {
 
 .footer-name {
   display: block;
-  margin-bottom: 0.25rem;
-  color: var(--color-gold);
-  font-family: var(--font-display);
-  font-size: 1.7rem;
-  font-weight: 400;
+  width: min(100%, 12.75rem);
+  height: auto;
+  margin-bottom: 0.65rem;
 }
 
 .footer-main address {
@@ -884,7 +923,8 @@ main {
   display: flex;
   flex: 1 1 24rem;
   flex-wrap: wrap;
-  gap: 0 1.5rem;
+  align-items: center;
+  gap: 0.5rem 1.75rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -892,12 +932,23 @@ main {
 
 .footer-press a {
   display: inline-flex;
-  min-height: 2.75rem;
+  min-height: 3.25rem;
   align-items: center;
-  color: var(--color-paper);
-  font-size: 0.875rem;
-  font-weight: 800;
-  text-underline-offset: 0.25rem;
+}
+
+.footer-press__logo {
+  display: block;
+  width: auto;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.footer-press__logo--mamma-knows-north {
+  height: 3.5rem;
+}
+
+.footer-press__logo--time-out {
+  height: 2.25rem;
 }
 
 .footer-attribution {
@@ -1008,6 +1059,18 @@ main {
     padding-block: 3.5rem 2.75rem;
   }
 
+  .menu-intro__layout {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.62fr);
+    align-items: start;
+    gap: 4rem;
+  }
+
+  .menu-intro__feature {
+    width: min(100%, 20rem);
+    margin: 0;
+    justify-self: end;
+  }
+
   .menu-intro h1,
   .visit-masthead h1 {
     font-size: 4.6rem;
@@ -1023,6 +1086,7 @@ main {
   }
 
   .menu-category {
+    height: 100%;
     padding: 1.75rem;
     border-right: 1px solid var(--color-line);
   }
