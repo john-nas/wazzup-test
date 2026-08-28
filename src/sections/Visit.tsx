@@ -2,32 +2,14 @@ import { business } from '../data/business'
 
 function Visit() {
   const { address } = business
+  const instagram = business.socials.find((social) => social.platform === 'Instagram')
 
   return (
     <section className="visit-section section" id="location" aria-labelledby="visit-heading">
       <div className="container visit-grid">
-        <div className="visit-intro">
-          <p className="eyebrow">Come say hello</p>
-          <h2 id="visit-heading">Find us in Northcote</h2>
-          <address>
-            {address.street}<br />
-            {address.suburb} {address.region} {address.postcode}
-          </address>
-          <a className="button" href={address.mapUrl} target="_blank" rel="noreferrer">
-            Get directions
-          </a>
-
-          <div className="social-links" aria-label="Social media">
-            {business.socials.map((social) => (
-              <a href={social.url} key={social.platform} target="_blank" rel="noreferrer">
-                {social.label} <span aria-hidden="true">↗</span>
-              </a>
-            ))}
-          </div>
-        </div>
-
         <div className="hours-card">
-          <h3>Opening hours</h3>
+          <p className="eyebrow">Plan your visit</p>
+          <h2 id="visit-heading">Opening hours</h2>
           <dl>
             {business.openingHours.map((entry) => (
               <div className={entry.isClosed ? 'is-closed' : undefined} key={entry.day}>
@@ -37,6 +19,24 @@ function Visit() {
             ))}
           </dl>
           <p className="data-note">Hours may vary on public holidays.</p>
+        </div>
+
+        <div className="visit-intro">
+          <p className="eyebrow">Find us</p>
+          <h2>We're on High Street.</h2>
+          <address>
+            {address.street}<br />
+            {address.suburb} {address.region} {address.postcode}
+          </address>
+          <a className="button" href={address.mapUrl} target="_blank" rel="noreferrer">
+            Get directions
+          </a>
+
+          {instagram && (
+            <a className="visit-instagram" href={instagram.url} target="_blank" rel="noreferrer">
+              See what's cooking on Instagram
+            </a>
+          )}
         </div>
 
         <div className="map-embed">

@@ -1,61 +1,54 @@
 import { menu } from '../data/menu'
-import { menuGallery } from '../data/menuGallery'
 import { formatPrice } from '../utils/formatPrice'
 
 function Menu() {
   return (
-    <section className="menu-section section" id="menu" aria-labelledby="menu-heading">
+    <section className="menu-section" id="menu" aria-label="Wazzup Falafel menu">
       <div className="container">
-        <div className="section-heading">
-          <div>
-            <p className="eyebrow">What we’re serving</p>
-            <h2 id="menu-heading">The menu</h2>
-          </div>
-          <p>Falafel made fresh, served generously and ready to share.</p>
-        </div>
-
-        <div className="menu-showcase">
-          <div className="menu-showcase__heading">
-            <h3>Main characters</h3>
-            <span>Swipe to explore</span>
-          </div>
-          <div
-            className="menu-showcase__rail"
-            role="region"
-            aria-label="Featured food from the menu"
-            tabIndex={0}
-          >
-            {menuGallery.map((image, index) => (
-              <figure className="menu-showcase__item" key={image.menuItemId}>
-                <img
-                  src={image.src}
-                  width={image.width}
-                  height={image.height}
-                  alt={image.alt}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <figcaption>
-                  <span>{String(index + 1).padStart(2, '0')} / {String(menuGallery.length).padStart(2, '0')}</span>
-                  <strong>{image.title}</strong>
-                  <p>{image.description}</p>
-                </figcaption>
-              </figure>
-            ))}
-          </div>
-        </div>
-
         <div className="menu-grid">
           {menu.categories.map((category) => (
             <article className="menu-category" key={category.id}>
-              <h3>{category.name}</h3>
+              <h2>{category.name}</h2>
               <ul>
-                {category.items.map((item) => (
-                  <li key={item.id}>
-                    <span>{item.name}</span>
-                    <strong>{formatPrice(item.priceInCents, menu.currency)}</strong>
-                  </li>
-                ))}
+                {category.items.map((item) => {
+                  const isExpandable = Boolean(item.description || item.image)
+                  const price = formatPrice(item.priceInCents, menu.currency)
+
+                  return (
+                    <li
+                      className={isExpandable ? 'menu-item menu-item--expandable' : 'menu-item menu-item--simple'}
+                      key={item.id}
+                    >
+                      {isExpandable ? (
+                        <details>
+                          <summary>
+                            <span className="menu-item-name">{item.name}</span>
+                            <strong>{price}</strong>
+                            <span className="menu-item-chevron" aria-hidden="true" />
+                          </summary>
+                          <div className="menu-item-details">
+                            {item.image && (
+                              <img
+                                src={item.image.src}
+                                width={item.image.width}
+                                height={item.image.height}
+                                alt={item.image.alt}
+                                loading="lazy"
+                                decoding="async"
+                              />
+                            )}
+                            {item.description && <p>{item.description}</p>}
+                          </div>
+                        </details>
+                      ) : (
+                        <>
+                          <span className="menu-item-name">{item.name}</span>
+                          <strong>{price}</strong>
+                        </>
+                      )}
+                    </li>
+                  )
+                })}
               </ul>
             </article>
           ))}
