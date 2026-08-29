@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import ScrollToTop from './components/ScrollToTop'
+import CateringPage from './pages/CateringPage'
 import CreditsPage from './pages/CreditsPage'
 import GalleryPage from './pages/GalleryPage'
 import HomePage from './pages/HomePage'
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />
+          <Route path="/catering" element={<CateringPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/story" element={<StoryPage />} />
           <Route path="/visit" element={<VisitPage />} />

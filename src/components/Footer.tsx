@@ -26,6 +26,7 @@ function Footer() {
         </div>
         <nav aria-label="Footer navigation">
           <Link to="/menu">Menu</Link>
+          <Link to="/catering">Catering & events</Link>
           <Link to="/gallery">Gallery</Link>
           <Link to="/visit">Hours & directions</Link>
           <Link to="/story">Our story</Link>

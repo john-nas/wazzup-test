@@ -179,7 +179,7 @@ main {
 }
 
 .site-nav--open {
-  max-height: 18rem;
+  max-height: 22rem;
   border-bottom-color: var(--color-line);
   visibility: visible;
 }

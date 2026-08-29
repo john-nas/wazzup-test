@@ -1,0 +1,281 @@
+.catering-hero {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+.catering-hero__media {
+  overflow: hidden;
+  aspect-ratio: 5 / 4;
+  background: var(--color-ink);
+}
+
+.catering-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.catering-hero__content {
+  width: min(calc(100% - 2rem), 34rem);
+  margin-inline: auto;
+  padding-block: 2.25rem 2.75rem;
+}
+
+.catering-hero__content .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.catering-hero h1,
+.catering-overview h2,
+.catering-food h2,
+.catering-enquiry h2,
+.catering-form__success h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.catering-hero h1 {
+  max-width: 9ch;
+  font-size: 3.5rem;
+}
+
+.catering-hero__content > p:not(.eyebrow) {
+  max-width: 31rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.catering-overview {
+  background: var(--color-paper);
+}
+
+.catering-overview__grid {
+  display: grid;
+  gap: 3.5rem;
+}
+
+.catering-overview__intro {
+  max-width: 38rem;
+}
+
+.catering-overview h2,
+.catering-food h2,
+.catering-enquiry h2 {
+  margin-bottom: 1.25rem;
+  font-size: 3rem;
+}
+
+.catering-overview__intro > p:last-child,
+.catering-food__inner > p:not(.eyebrow),
+.catering-enquiry__intro > p:last-child {
+  margin-bottom: 0;
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.catering-event-types {
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-line);
+}
+
+.catering-event-types h2 {
+  margin-bottom: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.catering-event-types > p {
+  margin-bottom: 1rem;
+  color: var(--color-ink-soft);
+  font-size: 0.875rem;
+}
+
+.catering-event-types ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catering-event-types li {
+  padding-block: 0.7rem;
+  border-bottom: 1px solid var(--color-line);
+  font-weight: 700;
+}
+
+.catering-food {
+  background: var(--color-bone);
+}
+
+.catering-food__inner {
+  max-width: 44rem;
+}
+
+.catering-food .text-link {
+  margin-top: 1rem;
+}
+
+.catering-enquiry {
+  scroll-margin-top: 4.75rem;
+  background: var(--color-paper);
+}
+
+.catering-enquiry__layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.catering-enquiry__intro {
+  max-width: 34rem;
+}
+
+.catering-form {
+  max-width: 48rem;
+}
+
+.catering-form__prototype-note {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 0;
+  border-block: 1px solid var(--color-line);
+  color: var(--color-ink-soft);
+  font-size: 0.8rem;
+}
+
+.catering-form__fields {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.form-field label {
+  font-size: 0.875rem;
+  font-weight: 750;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  min-height: 3rem;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid rgba(36, 37, 31, 0.42);
+  border-radius: 0;
+  background: #fffaf0;
+  color: var(--color-ink);
+}
+
+.form-field textarea {
+  min-height: auto;
+  resize: vertical;
+}
+
+.form-field input:hover,
+.form-field select:hover,
+.form-field textarea:hover {
+  border-color: var(--color-ink);
+}
+
+.catering-form__submit {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.catering-form__submit:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.catering-form__error {
+  margin: 1rem 0 0;
+  color: var(--color-tomato-dark);
+  font-weight: 700;
+}
+
+.catering-form__success {
+  max-width: 40rem;
+  padding-block: 2rem;
+  border-block: 1px solid var(--color-line);
+}
+
+.catering-form__success h3 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.catering-form__success > p:last-child {
+  margin: 0;
+  color: var(--color-ink-soft);
+}
+
+@media (min-width: 48rem) {
+  .catering-hero {
+    display: grid;
+    min-height: min(72svh, 43rem);
+    grid-template-columns: minmax(0, 1.15fr) minmax(23rem, 0.85fr);
+  }
+
+  .catering-hero__media {
+    height: 100%;
+    aspect-ratio: auto;
+  }
+
+  .catering-hero__content {
+    display: flex;
+    width: auto;
+    max-width: 34rem;
+    margin: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4rem;
+  }
+
+  .catering-hero h1 {
+    font-size: 4.75rem;
+  }
+
+  .catering-overview__grid {
+    grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.72fr);
+    align-items: start;
+    gap: 5rem;
+  }
+
+  .catering-overview h2,
+  .catering-food h2,
+  .catering-enquiry h2 {
+    font-size: 4rem;
+  }
+
+  .catering-event-types {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .catering-enquiry__layout {
+    grid-template-columns: minmax(17rem, 0.6fr) minmax(24rem, 1fr);
+    align-items: start;
+    gap: 5rem;
+  }
+
+  .catering-form__fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-field--wide {
+    grid-column: 1 / -1;
+  }
+
+  .catering-form__submit {
+    width: auto;
+    min-width: 12rem;
+  }
+}

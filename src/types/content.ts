@@ -56,6 +56,18 @@ export type GalleryImage = ImageAsset & {
   objectPosition?: string
 }
 
+export type CateringEnquiry = {
+  name: string
+  email: string
+  phone: string
+  eventDate: string
+  venue: string
+  guestCount: string
+  eventType: string
+  dietaryRequirements: string
+  additionalDetails: string
+}
+
 export type StoryContent = {
   eyebrow: string
   heading: string
