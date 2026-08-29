@@ -8,7 +8,7 @@ export const story: StoryContent = {
   paragraphs: [
     'When chef and co-owner Ahmad Al Alaea arrived in Australia in 2017, he missed the everyday falafel he grew up eating in Jordan. He couldn’t find one that tasted right, so he went back in 2019 and learned the tools of the trade in local falafel shops.',
     'Back in Melbourne/Naarm, Ahmad put what he had learned into Wazzup’s food truck in 2019. His friend Bara Sifi is his business partner and fellow co-owner.',
-    'Today Wazzup is at 343 High Street, Northcote. The falafel uses a secret 21-spice blend. Pita is made fresh every morning, and the falafel mix, hummus, tahini and condiments are made in-house. Ahmad is often at the counter, handing over a hot falafel to try.',
+    'Today Wazzup is at 343 High Street, Northcote. The falafel uses a secret 21-spice blend. Pita is made fresh every morning, and the falafel mix, hummus, tahini and condiments are made in-house. Ahmad is often at the counter, for new customers if you’re lucky he might even give you a hot falafel to try.',
   ],
   sources: [
     {

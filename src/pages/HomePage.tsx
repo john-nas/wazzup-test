@@ -25,7 +25,7 @@ function HomePage() {
             <p className="eyebrow">Come in hungry</p>
             <h2 id="home-ahmad-heading">Ahmad will probably say hello.</h2>
             <p>
-              There is a good chance the first thing you eat will be a hot falafel
+              When he spots a new face the first thing you eat will be a hot falafel
               Ahmad hands you across the counter.
             </p>
             <p>

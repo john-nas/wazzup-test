@@ -26,6 +26,7 @@ function Footer() {
         </div>
         <nav aria-label="Footer navigation">
           <Link to="/menu">Menu</Link>
+          <Link to="/gallery">Gallery</Link>
           <Link to="/visit">Hours & directions</Link>
           <Link to="/story">Our story</Link>
           <a href={business.socials[1].url} target="_blank" rel="noreferrer">Instagram</a>

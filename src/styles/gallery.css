@@ -1,0 +1,233 @@
+.gallery-page {
+  min-height: calc(100vh - 4.25rem);
+  padding-bottom: 0.375rem;
+  background: var(--color-bone);
+}
+
+.gallery-page__intro {
+  padding-block: 2.75rem 2rem;
+}
+
+.gallery-page__intro .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.gallery-page__intro h1 {
+  max-width: 10ch;
+  margin: 0 0 0.75rem;
+  color: var(--color-tomato-dark);
+  font-family: var(--font-display);
+  font-size: 3.35rem;
+  font-weight: 400;
+  line-height: 0.94;
+}
+
+.gallery-page__intro > p:last-child {
+  max-width: 34rem;
+  margin: 0;
+}
+
+.photo-gallery {
+  width: min(100%, 90rem);
+  margin-inline: auto;
+  padding-inline: 0.375rem;
+}
+
+.photo-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.375rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.photo-gallery__item {
+  min-width: 0;
+}
+
+.photo-gallery__item:nth-child(5n + 1) {
+  grid-column: 1 / -1;
+}
+
+.photo-gallery__item button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: var(--color-ink);
+  cursor: zoom-in;
+}
+
+.photo-gallery__item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: opacity 160ms ease;
+}
+
+.photo-gallery__item:nth-child(5n + 1) img {
+  aspect-ratio: 2 / 1;
+}
+
+.photo-gallery__item button:hover img {
+  opacity: 0.88;
+}
+
+.photo-viewer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #171814;
+  color: var(--color-paper);
+}
+
+.photo-viewer::backdrop {
+  background: rgba(17, 18, 15, 0.96);
+}
+
+html:has(.photo-viewer[open]) {
+  overflow: hidden;
+}
+
+.photo-viewer__inner {
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+
+.photo-viewer__close {
+  display: inline-flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-self: end;
+  gap: 0.45rem;
+  margin: max(0.5rem, env(safe-area-inset-top)) max(0.5rem, env(safe-area-inset-right)) 0;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(244, 237, 223, 0.48);
+  background: transparent;
+  color: var(--color-paper);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.photo-viewer__close span {
+  font-size: 1.35rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.photo-viewer__media {
+  display: grid;
+  min-height: 0;
+  place-items: center;
+  padding: 0.5rem;
+  touch-action: pan-y pinch-zoom;
+}
+
+.photo-viewer__media img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.photo-viewer__footer {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem max(0.75rem, env(safe-area-inset-right)) max(0.75rem, env(safe-area-inset-bottom)) max(0.75rem, env(safe-area-inset-left));
+  border-top: 1px solid rgba(244, 237, 223, 0.2);
+}
+
+.photo-viewer__caption span {
+  color: var(--color-gold);
+  font-size: 0.75rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+}
+
+.photo-viewer__caption p {
+  margin: 0.2rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.photo-viewer__navigation {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 0.5rem;
+}
+
+.photo-viewer__navigation button {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(244, 237, 223, 0.48);
+  background: transparent;
+  color: var(--color-paper);
+  cursor: pointer;
+}
+
+.photo-viewer__navigation button:hover,
+.photo-viewer__close:hover {
+  border-color: var(--color-paper);
+  background: rgba(244, 237, 223, 0.1);
+}
+
+.photo-viewer__navigation span {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+@media (min-width: 48rem) {
+  .gallery-page__intro {
+    padding-block: 3.5rem 2.75rem;
+  }
+
+  .gallery-page__intro h1 {
+    font-size: 4.6rem;
+  }
+
+  .photo-gallery {
+    padding-inline: 0.75rem;
+  }
+
+  .photo-gallery__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .photo-gallery__item:nth-child(5n + 1) {
+    grid-column: span 2;
+  }
+
+  .photo-viewer__media {
+    padding: 1rem 2rem;
+  }
+
+  .photo-viewer__footer {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-gallery__item img {
+    transition: none;
+  }
+}

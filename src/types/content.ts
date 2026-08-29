@@ -50,6 +50,12 @@ export type ImageAsset = {
   height: number
 }
 
+export type GalleryImage = ImageAsset & {
+  id: string
+  caption: string
+  objectPosition?: string
+}
+
 export type StoryContent = {
   eyebrow: string
   heading: string

@@ -27,7 +27,7 @@ function Hero() {
 
       <div className="container hero__content">
         <p className="eyebrow eyebrow--light">Palestinian street food in Northcote</p>
-        <h1 id="hero-heading">Fresh falafel. No fuss.</h1>
+        <h1 id="hero-heading">Fresh falafel.<br />No fuss.</h1>
         <p className="hero__intro">
           Made in house and fried to order. Eat it while it's hot.
         </p>
