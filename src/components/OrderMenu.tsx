@@ -1,4 +1,5 @@
 import { menu } from '../data/menu'
+import { orderingItemImages } from '../data/ordering'
 import type { BasketQuantities } from '../types/order'
 import { formatPrice } from '../utils/formatPrice'
 
@@ -25,11 +26,38 @@ function OrderMenu({
           <ul>
             {category.items.map((item) => {
               const quantity = basket[item.id] ?? 0
+              const previewImage = item.image ?? orderingItemImages[item.id]
 
               return (
-                <li className="order-item" key={item.id}>
-                  <span className="order-item__name">{item.name}</span>
-                  <strong>{formatPrice(item.priceInCents, menu.currency)}</strong>
+                <li
+                  className={`order-item${previewImage ? ' order-item--with-preview' : ''}`}
+                  key={item.id}
+                >
+                  {previewImage ? (
+                    <details className="order-item__preview">
+                      <summary>
+                        <span className="order-item__name">{item.name}</span>
+                        <strong>{formatPrice(item.priceInCents, menu.currency)}</strong>
+                        <span className="menu-item-chevron" aria-hidden="true" />
+                      </summary>
+                      <div className="order-item__preview-content">
+                        <img
+                          src={previewImage.src}
+                          width={previewImage.width}
+                          height={previewImage.height}
+                          alt={previewImage.alt}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                        {item.description && <p>{item.description}</p>}
+                      </div>
+                    </details>
+                  ) : (
+                    <>
+                      <span className="order-item__name">{item.name}</span>
+                      <strong>{formatPrice(item.priceInCents, menu.currency)}</strong>
+                    </>
+                  )}
 
                   {quantity === 0 ? (
                     <button
