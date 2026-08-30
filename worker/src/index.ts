@@ -62,6 +62,23 @@ const authoritativeMenu: Record<string, AuthoritativeMenuItem> = {
   fatteh: { name: 'Fatteh', priceInCents: 1700 },
   musabbaha: { name: 'Musabbaha', priceInCents: 1400 },
   'falafel-salad': { name: 'Falafel Salad', priceInCents: 1700 },
+  'black-tea': { name: 'Black Tea with Mint / Sage', priceInCents: 200 },
+  'organic-drink': { name: 'Organic Drinks', priceInCents: 550 },
+  water: { name: 'Water', priceInCents: 350 },
+  'falafel-stick': { name: 'Falafel Stick', priceInCents: 600 },
+  'hummus-bowl': { name: 'Hummus Bowl', priceInCents: 1200 },
+  'chips-small': { name: 'Chips — small', priceInCents: 600 },
+  'chips-large': { name: 'Chips — large', priceInCents: 1200 },
+  'pickles-plate-small': { name: 'Pickles Plate — small', priceInCents: 500 },
+  'pickles-plate-large': { name: 'Pickles Plate — large', priceInCents: 1000 },
+  'pita-bread': { name: 'Pita Bread', priceInCents: 300 },
+  'lebanese-bread': { name: 'Lebanese Bread', priceInCents: 100 },
+  tahini: { name: 'Tahini', priceInCents: 150 },
+  'hot-chilli': { name: 'Hot Chilli', priceInCents: 150 },
+  'wazzup-falafel-sauce': { name: 'Wazzup Falafel Sauce', priceInCents: 150 },
+  'falafel-ball': { name: '1 Falafel Ball', priceInCents: 120 },
+  'eggplant-2pcs': { name: 'Eggplant — 2 pieces', priceInCents: 100 },
+  'cauliflower-2pcs': { name: 'Cauliflower — 2 pieces', priceInCents: 100 },
 }
 
 class HttpError extends Error {

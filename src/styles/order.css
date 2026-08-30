@@ -54,17 +54,49 @@
 
 .order-category {
   --tatreez-divider-color: var(--color-tomato);
+  --tatreez-divider-opacity: 0.84;
+  --tatreez-border-height: 0.5rem;
+  --tatreez-motif-size: 6rem;
+  position: relative;
   padding: 1.25rem 1rem 0.5rem;
-  border-top: 0.5rem solid var(--tatreez-divider-color);
+  border-top: var(--tatreez-border-height) solid var(--tatreez-divider-color);
   background: var(--color-paper);
 }
 
-.order-category:nth-child(2) {
+.order-category:nth-child(3n + 2) {
   --tatreez-divider-color: var(--color-green);
+  --tatreez-divider-opacity: 0.9;
 }
 
-.order-category:nth-child(3) {
+.order-category:nth-child(3n) {
   --tatreez-divider-color: var(--color-gold);
+  --tatreez-divider-opacity: 1;
+}
+
+@supports ((mask-image: url('')) or (-webkit-mask-image: url(''))) {
+  .order-category {
+    border-top-color: transparent;
+  }
+
+  .order-category::before {
+    position: absolute;
+    top: calc(0rem - var(--tatreez-border-height));
+    left: 0;
+    width: 100%;
+    height: var(--tatreez-border-height);
+    background-color: var(--tatreez-divider-color);
+    content: "";
+    opacity: var(--tatreez-divider-opacity);
+    pointer-events: none;
+    -webkit-mask-image: url('../assets/illustrations/tirazain-nafnoof-border-14.png');
+    -webkit-mask-position: left center;
+    -webkit-mask-repeat: repeat-x;
+    -webkit-mask-size: var(--tatreez-motif-size) var(--tatreez-motif-size);
+    mask-image: url('../assets/illustrations/tirazain-nafnoof-border-14.png');
+    mask-position: left center;
+    mask-repeat: repeat-x;
+    mask-size: var(--tatreez-motif-size) var(--tatreez-motif-size);
+  }
 }
 
 .order-category h2 {

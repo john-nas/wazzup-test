@@ -89,7 +89,53 @@ export const menu: MenuCatalog = {
             height: 573,
           },
         },
+      ],
+    },
+    {
+      id: 'salad',
+      name: 'Salad',
+      items: [
         { id: 'falafel-salad', name: 'Falafel Salad', priceInCents: 1700 },
+      ],
+    },
+    {
+      id: 'drinks',
+      name: 'Drinks',
+      items: [
+        { id: 'black-tea', name: 'Black Tea with Mint / Sage', priceInCents: 200 },
+        { id: 'organic-drink', name: 'Organic Drinks', priceInCents: 550 },
+        { id: 'water', name: 'Water', priceInCents: 350 },
+      ],
+    },
+    {
+      id: 'to-go',
+      name: 'To go',
+      items: [
+        {
+          id: 'falafel-stick',
+          name: 'Falafel Stick',
+          priceInCents: 600,
+          description: 'Five falafel balls.',
+        },
+        { id: 'hummus-bowl', name: 'Hummus Bowl', priceInCents: 1200 },
+        { id: 'chips-small', name: 'Chips — small', priceInCents: 600 },
+        { id: 'chips-large', name: 'Chips — large', priceInCents: 1200 },
+        { id: 'pickles-plate-small', name: 'Pickles Plate — small', priceInCents: 500 },
+        { id: 'pickles-plate-large', name: 'Pickles Plate — large', priceInCents: 1000 },
+      ],
+    },
+    {
+      id: 'extras',
+      name: 'Extras',
+      items: [
+        { id: 'pita-bread', name: 'Pita Bread', priceInCents: 300 },
+        { id: 'lebanese-bread', name: 'Lebanese Bread', priceInCents: 100 },
+        { id: 'tahini', name: 'Tahini', priceInCents: 150 },
+        { id: 'hot-chilli', name: 'Hot Chilli', priceInCents: 150 },
+        { id: 'wazzup-falafel-sauce', name: 'Wazzup Falafel Sauce', priceInCents: 150 },
+        { id: 'falafel-ball', name: '1 Falafel Ball', priceInCents: 120 },
+        { id: 'eggplant-2pcs', name: 'Eggplant — 2 pieces', priceInCents: 100 },
+        { id: 'cauliflower-2pcs', name: 'Cauliflower — 2 pieces', priceInCents: 100 },
       ],
     },
   ],

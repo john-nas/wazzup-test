@@ -535,12 +535,12 @@ main {
   background: var(--color-paper);
 }
 
-.menu-category:nth-child(2) {
+.menu-category:nth-child(3n + 2) {
   --tatreez-divider-color: var(--color-green);
   --tatreez-divider-opacity: 0.9;
 }
 
-.menu-category:nth-child(3) {
+.menu-category:nth-child(3n) {
   --tatreez-divider-color: var(--color-gold);
   --tatreez-divider-opacity: 1;
 }
