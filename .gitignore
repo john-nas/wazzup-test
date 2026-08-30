@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+worker/.dev.vars
+worker/.dev.vars.*
+!worker/.dev.vars.example
 
 # Editor directories and files
 .vscode/*

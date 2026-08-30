@@ -179,7 +179,7 @@ main {
 }
 
 .site-nav--open {
-  max-height: 22rem;
+  max-height: 25rem;
   border-bottom-color: var(--color-line);
   visibility: visible;
 }
@@ -467,6 +467,11 @@ main {
   max-width: 37rem;
   margin-bottom: 0;
   font-size: 1rem;
+}
+
+.menu-intro__order-link {
+  width: fit-content;
+  margin-top: 1.25rem;
 }
 
 .menu-intro__layout {

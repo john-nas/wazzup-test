@@ -42,7 +42,7 @@ jobs:
       # visits, while 404.html lets BrowserRouter handle any unknown path.
       - name: Add client-side route shells
         run: |
-          for route in menu catering gallery story visit credits; do
+          for route in menu order order/success catering gallery story visit credits; do
             mkdir -p "dist/$route"
             cp dist/index.html "dist/$route/index.html"
           done

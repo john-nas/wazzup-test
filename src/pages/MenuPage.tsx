@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Menu from '../sections/Menu'
 import stuffedFalafelImage from '../assets/images/stuffed_falafel.jpg'
 
@@ -10,6 +11,7 @@ function MenuPage() {
             <p className="eyebrow">The menu</p>
             <h1 id="menu-page-heading">Falafel, made fresh.</h1>
             <p>Everything is plant-based. Pick a wrap, a box or one of Ahmad's specials.</p>
+            <Link className="button menu-intro__order-link" to="/order">Order pickup</Link>
           </div>
           <figure className="menu-intro__feature">
             <img

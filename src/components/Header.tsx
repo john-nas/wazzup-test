@@ -5,6 +5,7 @@ import logo from '../assets/images/wazzup-falafel-logo.png'
 const navigationItems = [
   { label: 'Home', to: '/', mobileOnly: true },
   { label: 'Menu', to: '/menu' },
+  { label: 'Order pickup', to: '/order' },
   { label: 'Catering & events', to: '/catering' },
   { label: 'Gallery', to: '/gallery' },
   { label: 'Visit', to: '/visit' },

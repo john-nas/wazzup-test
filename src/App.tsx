@@ -7,6 +7,8 @@ import CreditsPage from './pages/CreditsPage'
 import GalleryPage from './pages/GalleryPage'
 import HomePage from './pages/HomePage'
 import MenuPage from './pages/MenuPage'
+import OrderPage from './pages/OrderPage'
+import OrderSuccessPage from './pages/OrderSuccessPage'
 import StoryPage from './pages/StoryPage'
 import VisitPage from './pages/VisitPage'
 
@@ -19,6 +21,8 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />
+          <Route path="/order" element={<OrderPage />} />
+          <Route path="/order/success" element={<OrderSuccessPage />} />
           <Route path="/catering" element={<CateringPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/story" element={<StoryPage />} />

@@ -1,0 +1,6 @@
+name = "wazzup-ordering-sandbox"
+main = "src/index.ts"
+compatibility_date = "2026-08-30"
+
+# Configure SQUARE_ACCESS_TOKEN, SQUARE_LOCATION_ID,
+# SQUARE_WEBHOOK_SIGNATURE_KEY and APP_ORIGIN with `wrangler secret put`.
